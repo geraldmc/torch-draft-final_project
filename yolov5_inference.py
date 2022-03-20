@@ -1,6 +1,6 @@
 #import necessary packages
-from pyimagesearch.data_utils import get_dataloader
-import pyimagesearch.config as config
+from conf.data import get_dataloader
+from conf import config
 from torchvision.transforms import Compose, ToTensor, Resize
 from sklearn.model_selection import train_test_split
 from torchvision.datasets import ImageFolder
