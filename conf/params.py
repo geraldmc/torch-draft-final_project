@@ -17,6 +17,12 @@ THRESHOLD = 0.50
 # determine the device type 
 DEVICE = torch.device("cuda") if torch.cuda.is_available() else "cpu"
 
-# define paths to save output 
+# define the other paths 
 OUTPUT_PATH = 'output'
+LABEL_PATH = os.path.join(DATA_PATH, 'labels')
+MODEL_PATH = os.path.join(DATA_PATH, 'models')
+IMAGE_PATH = os.path.join(DATA_PATH, 'images')
+IMAGE_GD_ID = ''
+IMAGE_ZIP_FILE = os.path.join(IMAGE_PATH, 'images.zip')
+MODEL_GD_ID = ''
 YOLO_OUTPUT = os.path.join(OUTPUT_PATH, 'yolo_output')
