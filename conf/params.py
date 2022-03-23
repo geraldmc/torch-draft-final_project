@@ -4,8 +4,8 @@ import os
 
 # define the root data directory, train and test dataset paths
 DATA_PATH = 'data'
-TEST_PATH = os.path.join(BASE_PATH, 'train')
-TEST_PATH = os.path.join(BASE_PATH, 'test')
+TEST_PATH = os.path.join(DATA_PATH, 'train')
+TEST_PATH = os.path.join(DATA_PATH, 'test')
 
 # specify image size and batch size
 IMAGE_SIZE = 300
