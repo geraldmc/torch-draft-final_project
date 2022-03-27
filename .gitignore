@@ -121,6 +121,7 @@ env.bak/
 venv.bak/
 .DS_Store
 data/images.zip
+data/models.zip
 #data/images/*
 
 # Spyder project settings
