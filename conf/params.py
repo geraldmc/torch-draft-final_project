@@ -20,7 +20,7 @@ DEVICE = torch.device("cuda") if torch.cuda.is_available() else "cpu"
 # define the other paths 
 
 GDRIVE_ZIP_SRC = '/content/gdrive/MyDrive/DL4CV-2022/project-II/data/images.zip'
-IMG_DIRECTORY = '/content/torch-draft-final_project-main/data'
+IMG_DIRECTORY = '/content/torch-draft-final_project-main/data/images'
 IMG_ZIP_FILE = '/content/torch-draft-final_project-main/data/images.zip'
 IMG_GD_ID = '1dXykLwQ4wcHdI39YVc4rr6JFlo2ROSA_'
 
