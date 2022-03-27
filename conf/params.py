@@ -23,7 +23,7 @@ GD_ZIP_IMG = '/content/gdrive/MyDrive/DL4CV-2022/project-II/data/images.zip'
 GD_ZIP_MODEL = '/content/gdrive/MyDrive/DL4CV-2022/project-II/data/models.zip'
 IMG_DIRECTORY = '/content/torch-draft-final_project-main/data/images'
 IMG_ZIP_FILE = '/content/torch-draft-final_project-main/data/images.zip'
-MODEL_DIRECTORY = '/content/torch-draft-final_project-main/data/images'
+MODEL_DIRECTORY = '/content/torch-draft-final_project-main/data/models'
 MODEL_ZIP_FILE = '/content/torch-draft-final_project-main/data/models.zip'
 
 OUTPUT_PATH = 'output'
