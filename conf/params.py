@@ -30,6 +30,7 @@ OUTPUT_PATH = 'output'
 LABEL_PATH = os.path.join(DATA_PATH, 'labels')
 MODEL_PATH = os.path.join(DATA_PATH, 'models')
 IMAGE_PATH = os.path.join(DATA_PATH, 'images')
+IMG_CLASSES_PATH = os.path.join(DATA_PATH, 'image_classes')
 IMAGE_ZIP_FILE = os.path.join(IMAGE_PATH, 'images.zip')
 MODEL_GD_ID = ''
 IMAGE_GD_ID = ''
