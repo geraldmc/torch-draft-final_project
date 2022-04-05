@@ -25,6 +25,7 @@ IMG_DIRECTORY = '/content/torch-draft-final_project-main/data/images'
 IMG_ZIP_FILE = '/content/torch-draft-final_project-main/data/images.zip'
 MODEL_DIRECTORY = '/content/torch-draft-final_project-main/data/models'
 MODEL_ZIP_FILE = '/content/torch-draft-final_project-main/data/models.zip'
+IMG_TRAIN_PATH = '/content/torch-draft-final_project-main/data/train'
 
 OUTPUT_PATH = 'output'
 LABEL_PATH = os.path.join(DATA_PATH, 'labels')

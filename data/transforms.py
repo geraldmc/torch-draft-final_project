@@ -2,8 +2,6 @@ import os
 
 import torchvision.transforms as transforms
 
-
-
 base_transform = transforms.Compose([
     transforms.Resize((224, 224)),
     transforms.ToTensor(),
