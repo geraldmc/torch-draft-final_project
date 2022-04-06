@@ -28,8 +28,7 @@ IMG_TRAIN_PATH = os.path.join(DATA_PATH, 'train')
 IMG_VAL_PATH = os.path.join(DATA_PATH, 'val')
 IMG_TEST_PATH = os.path.join(DATA_PATH, 'test')
 IMG_CLASSES_PATH = os.path.join(DATA_PATH, 'image_classes')
-IMAGE_ZIP_FILE = os.path.join(IMAGE_PATH, 'images.zip')
-YOLO_OUTPUT = os.path.join(OUTPUT_PATH, 'yolo_output')
+IMG_ZIP_FILE = os.path.join(IMAGE_PATH, 'images.zip')
 
 # Global variables
 RAW_IMG_SIZE = (256, 256)
