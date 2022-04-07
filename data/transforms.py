@@ -6,13 +6,13 @@ import torchvision.transforms as transforms
 # Just normalization for validation
 paired_transforms = {
     'train': transforms.Compose([
-        transforms.RandomResizedCrop(input_size),
+        transforms.RandomResizedCrop(224),
         transforms.RandomHorizontalFlip(),
         transforms.ToTensor(),
         transforms.Normalize([0.485, 0.456, 0.406], [0.229, 0.224, 0.225])
     ]),
     'val': transforms.Compose([
-        transforms.Resize(input_size),
+        transforms.Resize(224),
         transforms.CenterCrop(input_size),
         transforms.ToTensor(),
         transforms.Normalize([0.485, 0.456, 0.406], [0.229, 0.224, 0.225])
