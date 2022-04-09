@@ -2,8 +2,8 @@ import os
 
 import torchvision.transforms as transforms
 
-# Data augmentation and normalization for training
-# Just normalization for validation
+# Simple data augmentation and normalization for training
+# Only normalization for validation
 paired_transforms = {
     'train': transforms.Compose([
         transforms.RandomResizedCrop(224),
@@ -18,6 +18,22 @@ paired_transforms = {
         transforms.Normalize([0.485, 0.456, 0.406], [0.229, 0.224, 0.225])
     ]),
 }
+
+paired_transforms_augment = {
+    'train': transforms.Compose([
+        transforms.RandomResizedCrop(224),
+        transforms.RandomHorizontalFlip(),
+        transforms.ToTensor(),
+        transforms.Normalize([0.485, 0.456, 0.406], [0.229, 0.224, 0.225])
+    ]),
+    'val': transforms.Compose([
+        transforms.Resize(224),
+        transforms.CenterCrop(224),
+        transforms.ToTensor(),
+        transforms.Normalize([0.485, 0.456, 0.406], [0.229, 0.224, 0.225])
+    ]),
+}
+
 
 base_transform = transforms.Compose([
     transforms.Resize((224, 224)),
