@@ -18,7 +18,7 @@ DATA_PATH = 'data'
 
 GD_ZIP_IMG = '/content/gdrive/MyDrive/DL4CV-2022/project-II/data/images.zip'
 GD_ZIP_MODEL = '/content/gdrive/MyDrive/DL4CV-2022/project-II/data/models.zip'
-IMG_DIRECTORY = '/content/torch-draft-final_project-main/data/images'
+#IMG_DIRECTORY = '/content/torch-draft-final_project-main/data/images'
 
 OUTPUT_PATH = 'output'
 LABEL_PATH = os.path.join(DATA_PATH, 'labels')
@@ -27,8 +27,9 @@ IMAGE_PATH = os.path.join(DATA_PATH, 'images')
 IMG_TRAIN_PATH = os.path.join(DATA_PATH, 'train')
 IMG_VAL_PATH = os.path.join(DATA_PATH, 'val')
 IMG_TEST_PATH = os.path.join(DATA_PATH, 'test')
-IMG_CLASSES_PATH = os.path.join(DATA_PATH, 'image_classes')
+IMG_CLASSES = os.path.join(DATA_PATH, 'image_classes')
 IMG_ZIP_FILE = os.path.join(DATA_PATH, 'images.zip')
+IMG_DIRECTORY = os.path.join(DATA_PATH, 'images')
 
 # Global variables
 RAW_IMG_SIZE = (256, 256)
