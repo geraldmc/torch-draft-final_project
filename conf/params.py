@@ -7,7 +7,7 @@ import os
 IMAGE_SIZE = 300
 PRED_BATCH_SIZE = 4
 
-# specify threshold confidence value for ssd detections
+# specify threshold confidence value 
 THRESHOLD = 0.50
 
 # determine the device type 
@@ -42,6 +42,7 @@ FOLDS = 5
 STOPPING_PATIENCE = 32
 LR_PATIENCE = 16
 INITIAL_LR = 0.0001
+NUM_CLASSES = 9
 CLASSES = [0, 1, 2, 3, 4, 5, 6, 7, 8]
 
 CLASS_NAMES = ['Chinee Apple',
