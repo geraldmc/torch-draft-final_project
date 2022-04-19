@@ -17,7 +17,7 @@ DEVICE = torch.device("cuda") if torch.cuda.is_available() else "cpu"
 DATA_PATH = 'data'
 
 GD_ZIP_IMG = '/content/gdrive/MyDrive/DL4CV-2022/project-II/data/images.zip'
-GD_ZIP_MODEL = '/content/gdrive/MyDrive/DL4CV-2022/project-II/data/models.zip'
+GD_ZIP_GAN = '/content/gdrive/MyDrive/DL4CV-2022/project-II/data/gans.zip'
 #IMG_DIRECTORY = '/content/torch-draft-final_project-main/data/images'
 
 OUTPUT_PATH = 'output'
@@ -29,6 +29,7 @@ IMG_VAL_PATH = os.path.join(DATA_PATH, 'val')
 IMG_TEST_PATH = os.path.join(DATA_PATH, 'test')
 IMG_CLASSES = os.path.join(DATA_PATH, 'image_classes')
 IMG_ZIP_FILE = os.path.join(DATA_PATH, 'images.zip')
+GAN_ZIP_FILE = os.path.join(DATA_PATH, 'gans.zip') # mohammed's GANs
 IMG_DIRECTORY = os.path.join(DATA_PATH, 'images')
 
 # Global variables
