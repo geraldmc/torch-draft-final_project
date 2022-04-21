@@ -14,7 +14,7 @@ base_transform = transforms.Compose([
 ])
 
 data_transforms = {
-    'original': transforms.Compose([
+    'default': transforms.Compose([
         transforms.Resize(target_size),
         transforms.ToTensor(),
         transforms.Normalize(
