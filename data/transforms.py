@@ -7,7 +7,6 @@ import torchvision.transforms as transforms
 
 target_size = (224, 224)
 
-
 base_transform = transforms.Compose([
     transforms.Resize(target_size),
     transforms.ToTensor(),
@@ -33,7 +32,7 @@ data_transforms = {
     ]),
     'ImageNet_autoaug': transforms.Compose([
         transforms.Resize(target_size),
-        ImageNetPolicy(),
+        transforms.AutoAugment(T.AutoAugmentPolicy.IMAGENET),
         transforms.ToTensor(),
         transforms.Normalize(
             [0.485, 0.456, 0.406], 
