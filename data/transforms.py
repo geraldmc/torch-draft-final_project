@@ -21,13 +21,11 @@ data_transforms = {
             [0.485, 0.456, 0.406], 
             [0.229, 0.224, 0.225])
     ]),
-    'augment': transforms.Compose([
+    'random_augment': transforms.Compose([
         transforms.Resize(target_size),
         transforms.RandomHorizontalFlip(),
         transforms.RandomRotation(20),
         transforms.RandomInvert(),
-        transforms.RandomAffine(degrees=(30, 70), translate=(0.1, 0.3), scale=(0.5, 0.75)),
-        transforms.RandomSolarize(threshold=192.0),
         transforms.ToTensor(),
         transforms.Normalize(
             [0.485, 0.456, 0.406], 
@@ -41,7 +39,7 @@ data_transforms = {
             [0.485, 0.456, 0.406], 
             [0.229, 0.224, 0.225])
     ]),
-    'resize_crop': transforms.Compose([
+    'crop': transforms.Compose([
         transforms.RandomResizedCrop(target_size),
         transforms.ToTensor(),
         transforms.Normalize(
@@ -49,7 +47,7 @@ data_transforms = {
             [0.229, 0.224, 0.225])
     ]),
 
-    'resize_translate': transforms.Compose([
+    'translate': transforms.Compose([
         transforms.Resize((224, 224)),
         transforms.RandomAffine(degrees = 15,translate=(0.1,0.1)),
         transforms.ToTensor(),
@@ -58,11 +56,13 @@ data_transforms = {
             [0.229, 0.224, 0.225])
     ]),
 
-    'resize_grayscale': transforms.Compose([
-    transforms.Resize((224, 224)),
-    transforms.Grayscale(num_output_channels=3),
-    transforms.ToTensor(),
-    transforms.Normalize((0.485, 0.456, 0.406), (0.229, 0.224, 0.225))
+    'grayscale': transforms.Compose([
+        transforms.Resize((224, 224)),
+        transforms.Grayscale(num_output_channels=3),
+        transforms.ToTensor(),
+        transforms.Normalize(
+            [0.485, 0.456, 0.406], 
+            [0.229, 0.224, 0.225])
    
     ])
 
