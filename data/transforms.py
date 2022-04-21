@@ -27,7 +27,7 @@ data_transforms = {
         transforms.RandomRotation(20),
         transforms.RandomInvert(),
         transforms.RandomAffine(degrees=(30, 70), translate=(0.1, 0.3), scale=(0.5, 0.75)),
-        transforms.RandomSolarize(threshold=192.0)
+        transforms.RandomSolarize(threshold=192.0),
         transforms.ToTensor(),
         transforms.Normalize(
             [0.485, 0.456, 0.406], 
