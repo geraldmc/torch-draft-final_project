@@ -4,6 +4,51 @@ import torchvision.transforms as transforms
 
 # Simple data augmentation and normalization for training
 # Only normalization for validation
+
+target_size = (224, 224)
+
+
+base_transform = transforms.Compose([
+    transforms.Resize(target_size),
+    transforms.ToTensor(),
+    transforms.Normalize((0.485, 0.456, 0.406), (0.229, 0.224, 0.225))
+])
+
+data_transforms = {
+    'original': transforms.Compose([
+        transforms.Resize(target_size),
+        transforms.ToTensor(),
+        transforms.Normalize(
+            [0.485, 0.456, 0.406], 
+            [0.229, 0.224, 0.225])
+    ]),
+    'augment': transforms.Compose([
+        transforms.Resize(target_size),
+        transforms.RandomHorizontalFlip(),
+        transforms.RandomRotation(20),
+        transforms.ToTensor(),
+        transforms.Normalize(
+            [0.485, 0.456, 0.406], 
+            [0.229, 0.224, 0.225])
+    ]),
+    'ImageNet_autoaug': transforms.Compose([
+        transforms.Resize(target_size),
+        ImageNetPolicy(),
+        transforms.ToTensor(),
+        transforms.Normalize(
+            [0.485, 0.456, 0.406], 
+            [0.229, 0.224, 0.225])
+    ]),
+    'resized_crop': transforms.Compose([
+        transforms.RandomResizedCrop(target_size),
+        transforms.ToTensor(),
+        transforms.Normalize(
+            [0.485, 0.456, 0.406], 
+            [0.229, 0.224, 0.225])
+    ])
+}
+
+# For paired dataloaders
 paired_transforms = {
     'train': transforms.Compose([
         transforms.Resize(224),
@@ -31,13 +76,6 @@ paired_transforms_augment = {
         transforms.Normalize([0.485, 0.456, 0.406], [0.229, 0.224, 0.225])
     ]),
 }
-
-
-base_transform = transforms.Compose([
-    transforms.Resize((224, 224)),
-    transforms.ToTensor(),
-    transforms.Normalize((0.485, 0.456, 0.406), (0.229, 0.224, 0.225))
-])
 
 # Resize, normalize and convert image to grayscale
 data_grayscale = transforms.Compose([
