@@ -32,7 +32,7 @@ data_transforms = {
     ]),
     'ImageNet_autoaug': transforms.Compose([
         transforms.Resize(target_size),
-        transforms.AutoAugment(T.AutoAugmentPolicy.IMAGENET),
+        transforms.AutoAugment(transforms.AutoAugmentPolicy.IMAGENET),
         transforms.ToTensor(),
         transforms.Normalize(
             [0.485, 0.456, 0.406], 
