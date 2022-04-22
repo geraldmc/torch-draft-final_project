@@ -97,6 +97,7 @@ paired_transforms_augment = {
     ]),
 }
 
+
 # Resize, normalize and convert image to grayscale
 data_grayscale = transforms.Compose([
     transforms.Resize((224, 224)),
@@ -162,10 +163,3 @@ data_shear = transforms.Compose([
     transforms.Normalize((0.485, 0.456, 0.406), (0.229, 0.224, 0.225))
 ])
 
-# Resize, normalize and crop image 
-data_center = transforms.Compose([
-	transforms.Resize((224, 224)),
-    transforms.CenterCrop(168),
-    transforms.ToTensor(),
-    transforms.Normalize((0.485, 0.456, 0.406), (0.229, 0.224, 0.225))
-])
