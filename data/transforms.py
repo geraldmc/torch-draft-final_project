@@ -63,10 +63,38 @@ data_transforms = {
         transforms.Normalize(
             [0.485, 0.456, 0.406], 
             [0.229, 0.224, 0.225])
-   
-    ])
+    ]),
+
+    'jitter_hue': transforms.Compose([
+        transforms.Resize((224, 224)),
+        transforms.ColorJitter(hue=0.4),
+        transforms.ToTensor(),
+        transforms.Normalize(
+            [0.485, 0.456, 0.406], 
+            [0.229, 0.224, 0.225])
+    ]),
+
+    'shear': transforms.Compose([
+        transforms.Resize((224, 224)),
+        transforms.RandomAffine(degrees=15,shear=2),
+        transforms.ToTensor(),
+        transforms.Normalize(
+            [0.485, 0.456, 0.406], 
+            [0.229, 0.224, 0.225])
+    ]),
+
+    'hvflip': transforms.Compose([
+        transforms.Resize((224, 224)),
+        transforms.RandomHorizontalFlip(1),
+        transforms.RandomVerticalFlip(1),
+        transforms.ToTensor(),
+        transforms.Normalize(
+            [0.485, 0.456, 0.406], 
+            [0.229, 0.224, 0.225])
+    ]),
 
 }
+
 
 # For paired dataloaders
 paired_transforms = {
@@ -158,7 +186,7 @@ data_vflip = transforms.Compose([
 # Resize, normalize and shear image
 data_shear = transforms.Compose([
 	transforms.Resize((224, 224)),
-    transforms.RandomAffine(degrees = 15,shear=2),
+    transforms.RandomAffine(degrees=15,shear=2),
     transforms.ToTensor(),
     transforms.Normalize((0.485, 0.456, 0.406), (0.229, 0.224, 0.225))
 ])
