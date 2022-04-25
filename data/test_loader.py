@@ -14,17 +14,11 @@ from data.transforms import data_transforms
 
 class DeepWeeds_Test(Dataset):
 
-    def __init__(self, csv_file, test=True):
+    def __init__(self, csv_file):
         """
         """
-        self.sub_directory = 'data/test'
-        self.csv_file_name = csv_file
+        self.csv_file_path = csv_file
         self.transform = data_transforms['default']
-        self.frame = None
-
-        csv_file_path = os.path.join(self.root_dir, 
-                                     self.sub_directory, 
-                                     self.csv_file_name)
         
         self.csv_data = pd.read_csv(csv_file_path, sep=',')
 
@@ -32,8 +26,7 @@ class DeepWeeds_Test(Dataset):
         return len(self.csv_data)
 
     def __getitem__(self, idx):
-        img_path = os.path.join(self.root_dir, 
-                                self.sub_directory,
+        img_path = os.path.join(self.csv_file_path,
                                 self.csv_data.iloc[idx, 0])
         
         img = Image.open(img_path)
