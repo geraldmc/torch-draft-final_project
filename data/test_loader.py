@@ -27,7 +27,7 @@ class DeepWeeds_Test(Dataset):
         return len(self.csv_data)
 
     def __getitem__(self, idx):
-        img_path = os.path.join(self.root, csv_data.iloc[idx, 0])
+        img_path = os.path.join(self.root, self.csv_data.iloc[idx, 0])
         
         img = Image.open(img_path)
 

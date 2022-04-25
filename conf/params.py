@@ -18,6 +18,7 @@ DATA_PATH = 'data'
 
 GD_ZIP_IMG = '/content/gdrive/MyDrive/DL4CV-2022/project-II/data/images.zip'
 GD_ZIP_GAN = '/content/gdrive/MyDrive/DL4CV-2022/project-II/data/gans.zip'
+GD_WRITE_DIR = '/content/gdrive/My Drive'
 #IMG_DIRECTORY = '/content/torch-draft-final_project-main/data/images'
 
 OUTPUT_PATH = 'output'
