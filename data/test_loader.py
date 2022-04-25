@@ -20,7 +20,7 @@ class DeepWeeds_Test(Dataset):
         self.csv_file_path = csv_file
         self.transform = data_transforms['default']
         
-        self.csv_data = pd.read_csv(csv_file_path, sep=',')
+        self.csv_data = pd.read_csv(csv_file_path)
 
     def __len__(self):
         return len(self.csv_data)
