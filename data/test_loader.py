@@ -34,4 +34,4 @@ class DeepWeeds_Test(Dataset):
         if self.transform is not None:
             img = self.transform(img)
 
-        return img, label
+        return img, str(label)
