@@ -10,8 +10,6 @@ from PIL import Image
 
 from data.transforms import data_transforms
 
-# See: https://debuggercafe.com/custom-dataset-and-dataloader-in-pytorch/
-
 class DeepWeeds_Test(Dataset):
 
     def __init__(self, csv_file):
