@@ -27,8 +27,8 @@ class DeepWeeds_Test(Dataset):
         return len(self.csv_data)
 
     def __getitem__(self, idx):
-        img_path = os.path.join(self.root, self.csv_data.iloc[idx, 0])
-        label = os.path.join(self.root, str(self.csv_data.iloc[idx, 1]))
+        img_path = os.path.join(self.root, self.csv_data.Filename[idx])
+        label = self.csv_data.Label[idx]
         img = Image.open(img_path)
 
         if self.transform is not None:
