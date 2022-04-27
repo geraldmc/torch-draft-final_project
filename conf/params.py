@@ -2,14 +2,6 @@
 import torch
 import os
 
-
-# specify image size and batch size
-IMAGE_SIZE = 300
-PRED_BATCH_SIZE = 4
-
-# specify threshold confidence value 
-THRESHOLD = 0.50
-
 # determine the device type 
 DEVICE = torch.device("cuda") if torch.cuda.is_available() else "cpu"
 
@@ -23,7 +15,7 @@ GD_WRITE_DIR = '/content/gdrive/My Drive'
 
 OUTPUT_PATH = 'output'
 LABEL_PATH = os.path.join(DATA_PATH, 'labels')
-MODEL_PATH = os.path.join(DATA_PATH, 'models')
+#MODEL_PATH = os.path.join(DATA_PATH, 'models')
 IMAGE_PATH = os.path.join(DATA_PATH, 'images')
 IMG_TRAIN_PATH = os.path.join(DATA_PATH, 'train')
 IMG_VAL_PATH = os.path.join(DATA_PATH, 'val')
