@@ -12,6 +12,8 @@ i) load_deepweeds_local.ipnb: The load_deepweeds_local is used for loading the d
 
 ii) DataAugmentation.ipynb: this notebook is used for augmenting the training data. Augmented training data is saved in "data/train_dataaug" folder. 
 
+iii) Generate_ACGAN_Images.ipynb: this notebook is used to generate ACGAN images and save in "data/test_generated/[class label]" folder.
+
 <br/>
 
 <b>DCGAN</b>
