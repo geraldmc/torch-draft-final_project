@@ -14,87 +14,85 @@ base_transform = transforms.Compose([
 ])
 
 data_transforms = {
-    'default': transforms.Compose([
-        transforms.Resize(target_size),
-        transforms.ToTensor(),
-        transforms.Normalize(
-            [0.485, 0.456, 0.406], 
-            [0.229, 0.224, 0.225])
+  'default': transforms.Compose([
+    transforms.Resize(target_size),
+    transforms.ToTensor(),
+    transforms.Normalize(
+        [0.485, 0.456, 0.406], 
+        [0.229, 0.224, 0.225])
     ]),
-    'random_augment': transforms.Compose([
-        transforms.Resize(target_size),
-        transforms.RandomHorizontalFlip(),
-        transforms.RandomRotation(20),
-        transforms.RandomInvert(),
-        transforms.ToTensor(),
-        transforms.Normalize(
-            [0.485, 0.456, 0.406], 
-            [0.229, 0.224, 0.225])
+  'random_augment': transforms.Compose([
+    transforms.Resize(target_size),
+    transforms.RandomHorizontalFlip(),
+    transforms.RandomRotation(20),
+    transforms.RandomInvert(),
+    transforms.ToTensor(),
+    transforms.Normalize(
+        [0.485, 0.456, 0.406], 
+        [0.229, 0.224, 0.225])
     ]),
-    'ImageNet_autoaug': transforms.Compose([
-        transforms.Resize(target_size),
-        transforms.AutoAugment(transforms.AutoAugmentPolicy.IMAGENET),
-        transforms.ToTensor(),
-        transforms.Normalize(
-            [0.485, 0.456, 0.406], 
-            [0.229, 0.224, 0.225])
+  'ImageNet_autoaug': transforms.Compose([
+    transforms.Resize(target_size),
+    transforms.AutoAugment(transforms.AutoAugmentPolicy.IMAGENET),
+    transforms.ToTensor(),
+    transforms.Normalize(
+        [0.485, 0.456, 0.406], 
+        [0.229, 0.224, 0.225])
     ]),
-    'crop': transforms.Compose([
-        transforms.RandomResizedCrop(target_size),
-        transforms.ToTensor(),
-        transforms.Normalize(
-            [0.485, 0.456, 0.406], 
-            [0.229, 0.224, 0.225])
-    ]),
-
-    'translate': transforms.Compose([
-        transforms.Resize((224, 224)),
-        transforms.RandomAffine(degrees = 15,translate=(0.1,0.1)),
-        transforms.ToTensor(),
-        transforms.Normalize(
-            [0.485, 0.456, 0.406], 
-            [0.229, 0.224, 0.225])
+  'crop': transforms.Compose([
+    transforms.RandomResizedCrop(target_size),
+    transforms.ToTensor(),
+    transforms.Normalize(
+        [0.485, 0.456, 0.406], 
+        [0.229, 0.224, 0.225])
     ]),
 
-    'grayscale': transforms.Compose([
-        transforms.Resize((224, 224)),
-        transforms.Grayscale(num_output_channels=3),
-        transforms.ToTensor(),
-        transforms.Normalize(
-            [0.485, 0.456, 0.406], 
-            [0.229, 0.224, 0.225])
+  'translate': transforms.Compose([
+    transforms.Resize((224, 224)),
+    transforms.RandomAffine(degrees = 15,translate=(0.1,0.1)),
+    transforms.ToTensor(),
+    transforms.Normalize(
+        [0.485, 0.456, 0.406], 
+        [0.229, 0.224, 0.225])
     ]),
 
-    'jitter_hue': transforms.Compose([
-        transforms.Resize((224, 224)),
-        transforms.ColorJitter(hue=0.4),
-        transforms.ToTensor(),
-        transforms.Normalize(
-            [0.485, 0.456, 0.406], 
-            [0.229, 0.224, 0.225])
+  'grayscale': transforms.Compose([
+    transforms.Resize((224, 224)),
+    transforms.Grayscale(num_output_channels=3),
+    transforms.ToTensor(),
+    transforms.Normalize(
+        [0.485, 0.456, 0.406], 
+        [0.229, 0.224, 0.225])
     ]),
 
-    'shear': transforms.Compose([
-        transforms.Resize((224, 224)),
-        transforms.RandomAffine(degrees=15,shear=2),
-        transforms.ToTensor(),
-        transforms.Normalize(
-            [0.485, 0.456, 0.406], 
-            [0.229, 0.224, 0.225])
+  'jitter_hue': transforms.Compose([
+    transforms.Resize((224, 224)),
+    transforms.ColorJitter(hue=0.4),
+    transforms.ToTensor(),
+    transforms.Normalize(
+        [0.485, 0.456, 0.406], 
+        [0.229, 0.224, 0.225])
     ]),
 
-    'hvflip': transforms.Compose([
-        transforms.Resize((224, 224)),
-        transforms.RandomHorizontalFlip(1),
-        transforms.RandomVerticalFlip(1),
-        transforms.ToTensor(),
-        transforms.Normalize(
-            [0.485, 0.456, 0.406], 
-            [0.229, 0.224, 0.225])
+  'shear': transforms.Compose([
+    transforms.Resize((224, 224)),
+    transforms.RandomAffine(degrees=15,shear=2),
+    transforms.ToTensor(),
+    transforms.Normalize(
+        [0.485, 0.456, 0.406], 
+        [0.229, 0.224, 0.225])
     ]),
 
+  'hvflip': transforms.Compose([
+    transforms.Resize((224, 224)),
+    transforms.RandomHorizontalFlip(1),
+    transforms.RandomVerticalFlip(1),
+    transforms.ToTensor(),
+    transforms.Normalize(
+        [0.485, 0.456, 0.406], 
+        [0.229, 0.224, 0.225])
+    ]),
 }
-
 
 # For paired dataloaders
 paired_transforms = {
