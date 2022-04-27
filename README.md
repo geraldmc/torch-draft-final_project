@@ -85,7 +85,7 @@ ii) `ACGAN Evaluation.ipynb`: used for evaluating the ACGAN generator model. The
   
   
 
-i) `main.ipynb`: this notebook is used to alter, train, evaluate, and test a ResNet-50 model for k-folds. The notebook was developed to be run on Colab and includes dependencies specific to that environment.
+i) `main.ipynb`: this notebook is used to alter, train, evaluate, and test a Pytorch ResNet-50 model for k-folds. The notebook was developed to be run on Colab and includes dependencies specific to that environment.
 
   
 
