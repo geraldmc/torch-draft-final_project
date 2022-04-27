@@ -58,7 +58,7 @@ ii) `DCGAN Evaluation.ipynb`: used for evaluating the DCGAN generator model. Thi
 
 #### ACGAN
 
-i) `AC-GAN.ipynb`: the ACGAN notebook is used to train the generator/discriminator. This notebook requires a data file to be in the same directory as the notebook. The images should be stored using a `data/train/[class label]/` directory structure. In order to train the model on augmented data, first run the `DataAugmentation.ipynb`. The train data for augmented data is located in `data/train_dataaug/[class label]/`. The notebook will also save the generator model in `Model` folder.
+i) `AC-GAN.ipynb`: used to train the generator/discriminator. This notebook requires a data file to be in the same directory as the notebook. The images should be stored using a `data/train/[class label]/` directory structure. In order to train the model on augmented data, first run the `DataAugmentation.ipynb`. The train data for augmented data is located in `data/train_dataaug/[class label]/`. The notebook will also save the generator model in `Model` folder.
 
 _Dependency for AC-GAN.ipynb_:  `acgan_network.py` in the same directory.
 
