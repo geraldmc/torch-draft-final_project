@@ -59,7 +59,7 @@ test_subset1.csv
 
 i) `load_deepweeds_local.ipynb`: used for loading the DeepWeeds dataset into Pytorch's dataload format at the `data/train/[class label]/`, `data/val/[class label]/` and `data/val/[class label]/` directories.
 
-ii) `DataAugmentation.ipynb`: used for augmenting the training data. Augmented training data is saved in `data/train_dataaug` folder.
+ii) `DataAugmentation.ipynb`: used for augmenting the training data. Augmented training data is saved in `data/train_dataaug` folder. Please follow https://imgaug.readthedocs.io/en/latest/ to install library.
 
 iii) `Generate_ACGAN_Images.ipynb`: used to generate ACGAN images and save them in the `data/test_generated/[class label]` folder.
 
