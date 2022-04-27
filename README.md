@@ -4,6 +4,11 @@ This notebook is associated with the project submission of MOHAMMED RASHED and G
 
 <hr>
 
+<b>DATA: Deep weeds data load (local Machine)</b>
+
+The load_deepweeds_local is used for loading the deepweeds data intoPytorch dataload format into "data/train/[class label]/", "data/val/[class label]/" and ""data/val/[class label]/" directories.
+
+
 <b>DCGAN</b>
 
 i. DCGAN.ipynb: the DCGAN notebook is used for training the generator/discriminator. The Notebook requires the data file to be in the same directory as the notebook. The images should be stored as "data/train/[class label]/" directory structure. The notebook will also save the generator model in "MOdel" folder. 
