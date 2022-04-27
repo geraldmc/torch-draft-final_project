@@ -49,10 +49,10 @@ ii) `DataAugmentation.ipynb`: used for augmenting the training data. Augmented t
 
 iii) `Generate_ACGAN_Images.ipynb`: used to generate ACGAN images and save them in the `data/test_generated/[class label]` folder.
 
-### DCGAN
+#### DCGAN
 i) `DCGAN.ipynb`: used for training the generator/discriminator. This notebook requires that the data file be in the same directory as the notebook. The images should be stored as `data/train/[class label]/` directory structure. The notebook will also save the generator model in `Model` folder.
 
-_Dependency for DCGAN_: `dcgan_network.py` in the same directory.
+_Dependency for DCGAN.ipynb_: `dcgan_network.py` in the same directory.
 
 ii) `DCGAN Evaluation.ipynb`: used for evaluating the DCGAN generator model. This notebook requires a trained generator model file `Model/deepweeds_DCGAN_gan_0.pth` to exist in the `Model` folder.
 
