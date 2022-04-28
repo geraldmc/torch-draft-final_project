@@ -99,11 +99,12 @@ Steps required to setup the runtime environment on Colab are as follows:
 
 **Note**: The third step is specific to user and environment as it depends on accessing Google Drive. The file `params.py` under the project code directory `conf` will have to be customized.
 
-Citations for code use:
+Citations:
 
 1. DCGAN: https://github.com/geraldmc/torch-draft-final_project
 2. DCGAN, ACGAN Evaluation (Frechet distance): https://github.com/aladdinpersson/Courses/blob/master/MOOCS/GAN_Specialization/Course%202%20-%20Build%20better%20GANs/Week%201/C2W1_FrechletDistance.ipynb
 3. ACGAN: https://github.com/clvrai/ACGAN-PyTorch/blob/master/main.py
 4. Data Augmentation (imgaug): https://github.com/aleju/imgaug
+5. DATA: “A. Olsen, D. A. Konovalov, B. Philippa, P. Ridd, J. C. Wood, J. Johns, W. Banks, B. Girgenti, O. Kenny, J. Whinney, B. Calvert, M. Rahimi Azghadi, and R. D. White, “DeepWeeds: A Multiclass Weed Species Image Dataset for Deep Learning,” Scientific Reports, vol. 9, no. 2058, 2 2019. [Online]. Available: https://doi.org/10.1038/s41598-018-38343-3 ”
 
 
