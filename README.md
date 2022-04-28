@@ -98,3 +98,12 @@ Steps required to setup the runtime environment on Colab are as follows:
  - Download and unzip the dataset from Drive
 
 **Note**: The third step is specific to user and environment as it depends on accessing Google Drive. The file `params.py` under the project code directory `conf` will have to be customized.
+
+Citations for code use:
+
+1. DCGAN: https://github.com/geraldmc/torch-draft-final_project
+2. DCGAN, ACGAN Evaluation (Frechet distance): https://github.com/aladdinpersson/Courses/blob/master/MOOCS/GAN_Specialization/Course%202%20-%20Build%20better%20GANs/Week%201/C2W1_FrechletDistance.ipynb
+3. ACGAN: https://github.com/clvrai/ACGAN-PyTorch/blob/master/main.py
+4. Data Augmentation (imgaug): https://github.com/aleju/imgaug
+
+
